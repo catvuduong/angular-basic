@@ -1,0 +1,31 @@
+<h3 class="text-warning text-center">Interaction</h3>
+<app-list-movies></app-list-movies>
+<div class="container my-2">
+    <h3>Thêm phim</h3>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="user">Mã phim:</label>
+                <input type="text" class="form-control" value="1" #code>
+            </div>
+            <div class="form-group">
+                <label for="user">Tên phim:</label>
+                <input type="text" class="form-control" value="Minions" #name>
+            </div>
+            <div class="form-group">
+                <label for="user">Giá phim:</label>
+                <input type="text" class="form-control" value="85000" #price>
+            </div>
+            <div class="form-group">
+                <label for="user">Ảnh đại diện:</label>
+                <input type="text" class="form-control" value="./assets/images/minions.jpg" #thumbnail>
+            </div>
+            <button class="btn btn-success" (click)="add(code.value, name.value, price.value, thumbnail.value)">Thêm
+                phim</button>
+        </div>
+    </div>
+</div>
+<h4>DOM HTML</h4>
+<!-- inputName.value just use this method in input tag -->
+<input type="text" #inputName>
+<button class="btn btn-info" (click)="domHTML()">DOM HTML</button>

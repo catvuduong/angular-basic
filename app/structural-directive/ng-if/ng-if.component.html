@@ -1,0 +1,9 @@
+<button class="btn btn-success" (click)="show()">Show</button>
+<button class="btn btn-danger" (click)="hide()">Hide</button>
+<button class="btn btn-info" (click)="toggle()">Toggle</button>
+<div *ngIf="status; else ElseContent">
+    <h5>Run for your life</h5>
+</div>
+<ng-template #ElseContent>
+    <h5>Save your life (status false, else content is showed)</h5>
+</ng-template>

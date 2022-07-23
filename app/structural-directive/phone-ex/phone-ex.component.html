@@ -1,0 +1,28 @@
+<h4 style="background-color: black; color: white;">Quản lý danh mục sản phẩm</h4>
+<div class="d-flex">
+    <input class="mx-2" type="text" placeholder="Mã Sản Phẩm" #code>
+    <input class="mx-2" type="text" placeholder="Tên Sản Phẩm" #name>
+    <input class="mx-2" type="text" placeholder="Giá" #price>
+    <button class="btn btn-success mx-2" (click)="addProduct(code.value, name.value, price.value)">Thêm Sản
+        Phẩm</button>
+</div>
+
+<h4 style="background-color: black; color: #ffffff;">Danh mục sản phẩm</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">STT</th>
+            <th scope="col">Mã</th>
+            <th scope="col">Tên Sản Phẩm</th>
+            <th scope="col">Giá</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of arrPhones; let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{item.MaSP}}</td>
+            <td>{{item.TenSP}}</td>
+            <td>{{item.Gia}}</td>
+        </tr>
+    </tbody>
+</table>

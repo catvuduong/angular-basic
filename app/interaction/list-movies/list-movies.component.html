@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div class="col-3 " *ngFor="let item of listMovies">
+            <app-movie [movie]="item" (eventLike)="likeMovie($event)"></app-movie>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <button class="btn btn-success my-2" (click)="viewChildren()">ViewChildren</button>
+            <h3>Danh sách like</h3>
+            <div *ngFor="let item of listLikes">{{item.movie}} - {{item.like}}</div>
+        </div>
+    </div>
+</div>

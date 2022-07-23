@@ -1,0 +1,12 @@
+<select #param name="" id="" (change)="changeColor(param.value)">
+    <option value="default">Default</option>
+    <option value="red">Red</option>
+    <option value="blue">Blue</option>
+    <option value="green">Green</option>
+</select>
+<div [ngSwitch]="switchProviso" class="mt-2">
+    <div style="color: white;" *ngSwitchDefault>DEFAULT</div>
+    <div style="color: red;" *ngSwitchCase="'red'">RED</div>
+    <h5 style="color: blue;" *ngSwitchCase="'blue'">BLUE</h5>
+    <h5 style="color: lightgreen;" *ngSwitchCase="'green'">GREEN</h5>
+</div>

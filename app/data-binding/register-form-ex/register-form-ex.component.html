@@ -1,0 +1,10 @@
+<div class="border border-success">
+    <p>Email</p>
+    <input type="text" name="" id="" [value]="email" [(ngModel)]="email">
+    <p>Full name</p>
+    <input type="text" name="" id="" [value]="fullname" #param>
+    <br>
+    <button class="btn btn-success" (click)="submit(param.value)">Submit</button>
+    <p>Email:{{email}}</p>
+    <p>Full name:{{fullname}}</p>
+</div>

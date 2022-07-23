@@ -1,0 +1,9 @@
+<h5>Interpolation binding</h5>
+<p>{{name}}</p>
+<input type="text" value={{name}}>
+<h5>Property binding</h5>
+<input type="text" [value]="email">
+<!-- [value] = make attribute of input tag -->
+<h5>Event binding</h5>
+<input type="text" [value]="name" #param>
+<button (click)="eventBinding(param)">Event binding</button>
